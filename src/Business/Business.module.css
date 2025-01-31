@@ -1,0 +1,64 @@
+.business {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 16.66rem;
+    margin: 0.05rem 2.3 rem 0.5rem;
+}
+
+.business.imageContainer {
+    height: 16.66rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.imageContainer img {
+    width: 100%; /* urj ugsun доторх зургийн хэмжээг жижигсгэж байна */
+}
+
+.business h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.businessInformation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.businessInformation p {
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1rem;
+    margin: 0;
+}
+
+.businessAddress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.businessReviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.businessReviews h3 {
+    color: #cca353;
+    font-weight: 600;
+    margin: 0;
+}
+
+.businessReviews .rating {
+    font-size: 0.88rem;
+    line-height: 1rem;
+}
