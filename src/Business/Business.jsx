@@ -1,18 +1,7 @@
 import styles from "./Business.module.css";
 
-const business = {
-  imageSrc: "src/SearchBar/background_search_mobile.jpg",
-  name: 'Amara"s cafe',
-  address: "Khan-Uul district",
-  city: "Tokyo",
-  state: "Mongolia",
-  zipCode: "976",
-  category: "Italian",
-  rating: 4.5,
-  reviewCount: 80,
-};
 
-export default function Business() {
+export default function Business({business}) {
   return (
     <div className={styles.business}>
       <div className={styles.imageContainer}>
