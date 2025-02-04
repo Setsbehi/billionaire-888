@@ -20,13 +20,14 @@ const businesses = [business, business, business, business, business, business];
 // This array will serve as your hardcoded list of businesses, which can be passed to the BusinessList component.
 
 export default function App() {
+  const searchYelp = (searchTerm, location, sortBy) => {
+    console.log(`Searching Yelp with ${searchTerm}, ${location}, ${sortBy}`);
+  };
   return (
-    <>
-      <div className={style.App}>
-        <h1>Billionaire-888</h1>
-        <SearchBar />
-        <BusinessList businesses={businesses} />
-      </div>
-    </>
+    <div className={style.App}>
+      <h1>Billionaire-888</h1>
+      <SearchBar searchYelp={searchYelp} />
+      <BusinessList businesses={businesses} />
+    </div>
   );
 }
