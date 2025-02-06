@@ -4,9 +4,10 @@ import styles from "./BusinessList.module.css";
 export default function BusinessList({ businesses }) {
   return (
     <div className={styles.businessList}>
-      {businesses.map((business) => {
-        return <Business business={business} key={business.id} />;
+      {businesses?.map((business) => {
+        return <Business business={business} key={business.name} />;
       })}
     </div>
   );
 }
+

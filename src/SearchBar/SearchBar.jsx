@@ -8,9 +8,22 @@ const sortByOptions = {
 };
 
 export default function SearchBar({ searchYelp }) {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [term, setTerm] = useState("");
   const [location, setLocation] = useState("");
   const [sortBy, setSortBy] = useState("best_match");
+
+  function handleSearch(event) {
+    event.preventDefault();
+    searchYelp(term, location, sortBy);
+  }
+
+  function handleTermChange(event) {
+    setTerm(event.target.value);
+  }
+
+  function handleLocationChange(event) {
+    setLocation(event.target.value);
+  }
 
   function getSortByClass(sortByOption) {
     if (sortBy === sortByOption) {
@@ -19,19 +32,6 @@ export default function SearchBar({ searchYelp }) {
   }
   function handleSortByChange(sortByOption) {
     setSortBy(sortByOption);
-  }
-
-  function handleSearchTermChange(event) {
-    setSearchTerm(event.target.value);
-  }
-
-  function handleLocationChange(event) {
-    setLocation(event.target.value);
-  }
-
-  function handleSearch(event) {
-    event.preventDefault();
-    searchYelp(searchTerm, location, sortBy);
   }
 
   function renderSortByObtions() {
@@ -61,7 +61,7 @@ export default function SearchBar({ searchYelp }) {
           <input
             type="text"
             placeholder="Search Business..."
-            onChange={handleSearchTermChange}
+            onChange={handleTermChange}
           />
           <input placeholder="where" onChange={handleLocationChange} />
         </div>
@@ -72,7 +72,6 @@ export default function SearchBar({ searchYelp }) {
     </div>
   );
 }
-
 
 // Searching Yelp with food, Italy, best_match
 // App.jsx:24 Searching Yelp with food, Italy, rating

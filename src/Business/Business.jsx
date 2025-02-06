@@ -16,7 +16,7 @@ export default function Business({business}) {
         </div>
         <div className={styles.businessReviews}>
           <h3>{business.category.toLocaleUpperCase()}</h3>
-          <h3 className={styles.rating}>{`${business.rating}`}</h3>
+          <h3 className={styles.rating}>{`${business.rating} stars`}</h3>
           <p>{`${business.reviewCount} reviews`}</p>
         </div>
       </div>
